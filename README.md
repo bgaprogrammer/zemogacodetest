@@ -39,7 +39,7 @@ To accomplish the test I used the following technologies/frameworks:
 
 > The MVC controller and WebApi controllers live in the same project
 
-The Net Standard library class hierachy looks like this:
+The Net Standard library class hierarchy looks like this:
 
 ![alt text](https://github.com/bgaprogrammer/zemogacodetest/blob/master/Images/CoreLibClassDiag.png "Core Library classes")
 
