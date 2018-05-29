@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JR.FinancialManager.Core.Data.Helpers.PagedExtension" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Data\Helpers\PagedExtension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Data.Helpers.PagedResult&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Helpers\PagedResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Data.Helpers.PagedResultBase" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAEAAAAAAgAAAQAAAAAAAEAAAAAI=</HashCode>
+      <FileName>Data\Helpers\PagedResultBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Data.Migrations.CreateIdentitySchema" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Data\Migrations\00000000000000_CreateIdentitySchema.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Data.Migrations.FinancialManagerDbContextModelSnapshot" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Data\Migrations\FinancialManagerDbContextModelSnapshot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Data.Repository.Implementation.CustomerRepository" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Data\Repository\Implementation\CustomerRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Data.Repository.Implementation.GenericRepository&lt;TEntity&gt;" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAAAAAAAAAAAAAAEAAEAAAgAAAAAAAIA=</HashCode>
+      <FileName>Data\Repository\Implementation\GenericRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Data.Repository.Implementation.TransactionRepository" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Data\Repository\Implementation\TransactionRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Data.Repository.Implementation.TransactionTypeRepository" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Data\Repository\Implementation\TransactionTypeRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Data.FinancialManagerDbContext" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGAAAAAAQAAAAAAAAAAAAAAECAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\FinancialManagerDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Data.SeedData" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Data\SeedData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.Dto.CustomerDto" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Dto\CustomerDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.Dto.ListRequestDto" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAEAAAEAAAAAAAAAAQAAABABA=</HashCode>
+      <FileName>Models\Dto\ListRequestDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.Dto.ListSortDto" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Dto\ListRequestDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.Dto.MainFilterDto" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Models\Dto\ListRequestDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.Dto.FilterDto" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAGAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Dto\ListRequestDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.Dto.LoginDto" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Dto\LoginDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.Dto.LoginResultDto" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Models\Dto\LoginDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.Dto.TransactionDetailDto" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCAAAgAAAAAQAAAAAAAIAAAAAAIAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Models\Dto\TransactionDetailDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.Dto.TransactionDto" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCAAAAAAAAAAgAAAAAAACAACgAAAEAIACBAAACAAA=</HashCode>
+      <FileName>Models\Dto\TransactionDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.Dto.TransactionTypeDto" Collapsed="true">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Dto\TransactionTypeDto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.ApplicationUser" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.Customer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Customer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.ErrorViewModel" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ErrorViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.Transaction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCAAAAAAAAAAgAAAAAAACAACgAAAEAIACBAAACAAA=</HashCode>
+      <FileName>Models\Transaction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.TransactionDetail" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiCAAAgAAAAAQAAAAAAAIAAAAAAIAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Models\TransactionDetail.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Models.TransactionType" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TransactionType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Services.Implementation.TransactionService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAIAAAAAAAAAAhAAAAAAgAAAAAAAIABAABgAA=</HashCode>
+      <FileName>Services\Implementation\TransactionService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="JR.FinancialManager.Core.Services.MappingsProfile" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\MappingsProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="JR.FinancialManager.Core.Data.Repository.Definition.ICustomerRepository" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Data\Repository\Definition\ICustomerRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="JR.FinancialManager.Core.Data.Repository.Definition.IEntity" Collapsed="true">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Repository\Definition\IEntity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="JR.FinancialManager.Core.Data.Repository.Definition.IGenericRepository&lt;TEntity&gt;" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAgAAAAAAAIA=</HashCode>
+      <FileName>Data\Repository\Definition\IGenericRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="JR.FinancialManager.Core.Data.Repository.Definition.ITransactionRepository" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Data\Repository\Definition\ITransactionRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="JR.FinancialManager.Core.Data.Repository.Definition.ITransactionTypeRepository" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Data\Repository\Definition\ITransactionTypeRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="JR.FinancialManager.Core.Services.Definition.ITransactionService" Collapsed="true">
+    <Position X="9.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAAAIAAAABgAA=</HashCode>
+      <FileName>Services\Definition\ITransactionService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

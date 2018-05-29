@@ -1,0 +1,230 @@
+﻿<div id="app"></div>
+
+<script id="login-view" type="text/x-kendo-template">
+    <div id="loginForm" class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <div class="form-login">
+                <h4>Log In</h4>
+                <input type="text" id="user" name="user" class="form-control input-sm chat-input" placeholder="user" required validationMessage="User is required" data-bind="value: user" />
+                <span class="k-invalid-msg" data-for="user"></span>
+                </br>
+                <input type="text" id="password" name="password" class="form-control input-sm chat-input" placeholder="password" required validationMessage="Password is required" data-bind="value: pwd" />
+                <span class="k-invalid-msg" data-for="contrasena"></span>
+                </br>
+                <div class="wrapper">
+                    <span class="group-btn">
+                        <a href="#" class="btn btn-primary btn-md" data-bind="click: onBtnloginClick">Log In<i class="fa fa-sign-in"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="transactions-view" type="text/x-kendo-tempate">
+    <div id="transactionsForm" class="row top-buffer">
+        <div class="col-lg-12">
+            <div id="transactionsGrid" name="transactionsGrid"
+                 data-role="grid"
+                 data-sortable="true"
+                 data-pageable="true"
+                 data-scrollable="false"
+                 data-filterable="false"
+                 data-bind="source: transactionsDS,
+                            events: { edit: onEditTransactionsGrid, dataBound: onDataBoundTransactionsGrid }"
+                 data-editable="{
+                     create: true,
+                     destroy: true,
+                     update: true,
+                     mode: 'popup',
+                     createAt: 'bottom',
+                     confirmation: true,
+                     template: kendo.template($('#transactions-popup-editor').html())
+                 }"
+                 data-toolbar="[{ name: 'create', text: 'New Transaction' }]"
+                 data-columns='[
+                     { field: "id", title: "Id" },
+                     { field: "transactionType", title: "Type", template: "#= transactionType.name #" },
+                     { field: "originCustomer", title: "Origin", template: "#= originCustomer.name #" },
+                     { field: "destCustomer", title: "Destination", template: "#= destCustomer.name #" },
+                     { field: "amount", title: "Amount", format: "{0:c0}" },
+                     { field: "executionDate", title: "Date", format: "{0:dd/MM/yyyy hh:mm:ss.fff tt}" },
+                     { field: "transactionDetail.isFraud", title: "Is Fraud" },
+                     { "command": [{ className: "k-command", name: "edit", text: "Edit Fraud" }], title: "&nbsp;" }]'
+                 ]'>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="transactions-popup-editor" type="text/x-kendo-template">
+    <div id="transactionsEditForm" class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-sm-3 required" for="ddlTranTypeModal">Type:</label>
+            <div class="col-sm-6">
+                <input id="ddlTranTypeModal" name="ddlTranTypeModal" required validationMessage="Type is required" style="width: 250px;"
+                       data-role="dropdownlist"
+                       data-auto-bind="false"
+                       data-option-label="--Select--"
+                       data-text-field="name"
+                       data-value-field="id"
+                       data-filter="startswith"
+                       data-bind="source: tranTypeDS,
+                                  value: transactionType" />
+                <span class="k-invalid-msg" data-for="ddlTranTypeModal"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3 required" for="ddlCustOriginModal">Origin:</label>
+            <div class="col-sm-6">
+                <input id="ddlCustOriginModal" name="ddlCustOriginModal" required validationMessage="Origin Customer is required" style="width: 250px;"
+                       data-role="dropdownlist"
+                       data-auto-bind="false"
+                       data-option-label="--Select--"
+                       data-text-field="name"
+                       data-value-field="id"
+                       data-filter="startswith"
+                       data-bind="source: customerOriginDS,
+                                  value: originCustomer" />
+                <span class="k-invalid-msg" data-for="ddlCustOriginModal"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3 required" for="ddlCustDestModal">Destination:</label>
+            <div class="col-sm-6">
+                <input id="ddlCustDestModal" name="ddlCustDestModal" required validationMessage="Destination Customer is required" style="width: 250px;"
+                       data-role="dropdownlist"
+                       data-auto-bind="false"
+                       data-option-label="--Select--"
+                       data-text-field="name"
+                       data-value-field="id"
+                       data-filter="startswith"
+                       data-bind="source: customerDestinationDS,
+                                  value: destCustomer" />
+                <span class="k-invalid-msg" data-for="ddlCustDestModal"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3 required" for="dpTransactionDateModal">Date:</label>
+            <div class="col-sm-6">
+                <input id="dpTransactionDateModal" name="dpTransactionDateModal" required validationMessage="Date is required" style="width: 250px;"
+                       data-role="datepicker"
+                       data-format="dd/MM/yyyy"
+                       data-bind="value: executionDate" />
+                <span class="k-invalid-msg" data-for="dpTransactionDateModal"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3 required" for="ntxtTransactionAmountModal">Amount:</label>
+            <div class="col-sm-6">
+                <input id="ntxtTransactionAmountModal" name="ntxtTransactionAmountModal" required validationMessage="Amount is required" style="width: 250px;"
+                       data-role="numerictextbox"
+                       data-format="c0"
+                       data-min="1"
+                       data-decimals="0"
+                       data-spinners="false"
+                       data-bind="value: amount" />
+                <span class="k-invalid-msg" data-for="ntxtTransactionAmountModal"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3 required" for="chkIsFraudModal">Is Fraud:</label>
+            <div class="col-sm-6">
+                <input id="chkIsFraudModal" name="chkIsFraudModal" type="checkbox" style="width: 250px;"
+                       data-bind="checked: transactionDetail.isFraud" />
+            </div>
+        </div>
+        @*<div class="form-group">
+            <label class="control-label col-sm-3 required" for="ddlTipoRiesgoModal">Tipo Riesgo:</label>
+            <div class="col-sm-6">
+                <input id="ddlTipoRiesgoModal" name="ddlTipoRiesgoModal" required validationMessage="El Tipo Riesgo es obligatorio" style="width: 250px;"
+                       data-role="dropdownlist"
+                       data-auto-bind="false"
+                       data-option-label="--Seleccione--"
+                       data-text-field="nombre"
+                       data-value-field="id"
+                       data-bind="source: tipoRiesgoDS,
+                                  value: tipoRiesgo" />
+                <span class="k-invalid-msg" data-for="ddlTipoRiesgoModal"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3 required" for="multiClientesModal">Clientes:</label>
+            <div class="col-sm-6">
+                <select id="multiClientesModal" name="multiClientesModal" required validationMessage="Debe seleccionar al menos un cliente" style="width: 250px;"
+                        data-role="multiselect"
+                        data-auto-bind="true"
+                        data-placeholder="Seleccione un cliente"
+                        data-text-field="nombre"
+                        data-value-field="id"
+                        data-bind="source: clienteDS,
+                                  value: clientes" />
+                <span class="k-invalid-msg" data-for="multiClientesModal"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3 required" for="txtNombreModal">Nombre:</label>
+            <div class="col-sm-6">
+                <input id="txtNombreModal" name="txtNombreModal" type="text" class="k-textbox" required validationMessage="El Nombre es obligatorio" style="width: 250px;"
+                       data-bind="value: nombre" />
+                <span class="k-invalid-msg" data-for="txtNombreModal"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3 required" for="txtDescripcionModal">Descripcion:</label>
+            <div class="col-sm-6">
+                <input id="txtDescripcionModal" name="txtDescripcionModal" type="text" class="k-textbox" required validationMessage="La Descripcion es obligatoria" style="width: 250px;"
+                       data-bind="value: descripcion" />
+                <span class="k-invalid-msg" data-for="txtDescripcionModal"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3 required" for="dpInicioVigenciaModal">Inicio Vigencia:</label>
+            <div class="col-sm-6">
+                <input id="dpInicioVigenciaModal" name="dpInicioVigenciaModal" required validationMessage="El Incio de Vigencia es obligatorio" style="width: 250px;"
+                       data-role="datepicker"
+                       data-format="dd/MM/yyyy"
+                       data-bind="value: inicioVigencia" />
+                <span class="k-invalid-msg" data-for="dpInicioVigenciaModal"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3 required" for="ntxtCoberturaMesesModal">Meses Cobertura:</label>
+            <div class="col-sm-6">
+                <input id="ntxtCoberturaMesesModal" name="ntxtPrecioModal" required validationMessage="Los meses son obligatorios" style="width: 250px;"
+                       data-role="numerictextbox"
+                       data-format="n0"
+                       data-min="1"
+                       data-decimals="0"
+                       data-bind="value: coberturaMeses" />
+                <span class="k-invalid-msg" data-for="ntxtPrecioModal"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3 required" for="ntxtPrecioModal">Precio:</label>
+            <div class="col-sm-6">
+                <input id="ntxtPrecioModal" name="ntxtPrecioModal" required validationMessage="El precio es obligatorio" style="width: 250px;"
+                       data-role="numerictextbox"
+                       data-format="c0"
+                       data-min="1"
+                       data-decimals="0"
+                       data-spinners="false"
+                       data-bind="value: precio" />
+                <span class="k-invalid-msg" data-for="ntxtPrecioModal"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3 required" for="ntxtPorcentajeCubrimientoModal">Cubrimiento (%):</label>
+            <div class="col-sm-6">
+                <input id="ntxtPorcentajeCubrimientoModal" name="ntxtPorcentajeCubrimientoModal" required validationMessage="El porcentaje es obligatorio" style="width: 250px;"
+                       data-role="numerictextbox"
+                       data-format="\\# \\%"
+                       data-min="1"
+                       data-decimals="0"
+                       data-spinners="false"
+                       data-bind="value: porcentajeCubrimiento" />
+                <span class="k-invalid-msg" data-for="ntxtPorcentajeCubrimientoModal"></span>
+            </div>
+        </div>*@
+    </div>
+</script>
