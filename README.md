@@ -1,6 +1,6 @@
 ## Zemoga Code Test
 
-##Data Modeling Porcess
+### Data Modeling Porcess
 
 The first step was to create the data storage based on the kaggle dataset provided. To do that I followed the next steps:
 
@@ -17,11 +17,11 @@ The first step was to create the data storage based on the kaggle dataset provid
 
 6. With the data store ready the application development begun.
 
-###Development Porcess
+### Development Porcess
 
 To accomplish the test I used the following technologies/frameworks:
 
-####Backend
+#### Backend
 
 * A net standard library that holds the business definitions and concrete implementations
 * Entity Framework core
@@ -29,7 +29,7 @@ To accomplish the test I used the following technologies/frameworks:
 * ASP.NET Core Identity
 * ASP.NET Core MVC - WebApi
 
-####Front End
+#### Front End
 
 * ASP.NET Core MVC
 * Bootstrap
@@ -43,7 +43,7 @@ The Net Standard library class hierachy looks like this:
 
 The web application is basically a SPA (Single Page Application) so there is a single .cshtml view. The concrete views, authorization a routing are handled by the Kendo UI SPA Framework.
 
-###How to run
+### How to run
 
 1. In the *Database* folder you can find a SQL Server 2017 .bak file, so it's just needed to restore it in a SQL Server instance and you are ready to go with the data storage.
 
@@ -65,6 +65,6 @@ Assistant: Can create a new transaction but can't mark the new transaction as fr
 Manager: Can mark any transaction as fraud or remove the fraud flag. Can't create new transactions.
 Administrator: Can create new transactions and change fraud flag in existing transactions.
 
-###Reach me out
+### Reach me out
 
 You can find me in Twitter as @bgaprogrammer and in skype as @jramirezdev
