@@ -18,7 +18,7 @@ The first step was to create the data storage based on the kaggle dataset provid
 
 > This calculation took about 6 hours in my local machine
 
-### Development Porcess
+### Development Process
 
 To accomplish the test I used the following technologies/frameworks:
 
@@ -43,11 +43,11 @@ The Net Standard library class hierachy looks like this:
 
 ![alt text](https://github.com/bgaprogrammer/zemogacodetest/blob/master/Images/CoreLibClassDiag.png "Core Library classes")
 
-The web application is basically a SPA (Single Page Application) so there is a single .cshtml view. The concrete views, authorization a routing are handled by the Kendo UI SPA Framework.
+The web application is basically a SPA (Single Page Application) so there is just a single .cshtml view. The concrete views, authorization a routing are handled by the Kendo UI SPA Framework.
 
 ### How to run
 
-1. In the *Database* folder you can find a SQL Server 2017 .bak file, so it's just needed to restore it in a SQL Server instance and you are ready to go with the data storage.
+1. In the *Database* folder of the repo you can find a SQL Server 2017 .bak file, so it's just needed to restore it in a SQL Server instance and you are ready to go with the data storage.
 
 > Note: The .bak file was uploaded using the Git LFS extension, it's possible you need to install it before download it. Also its protected by a password, it's: **j0rg3r4m1r3z**
 
