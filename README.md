@@ -1,6 +1,6 @@
 ## Zemoga Code Test
 
-###Data Modeling Porcess
+##Data Modeling Porcess
 
 The first step was to create the data storage based on the kaggle dataset provided. To do that I followed the next steps:
 
