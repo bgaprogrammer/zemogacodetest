@@ -24,8 +24,8 @@ To accomplish the test I used the following technologies/frameworks:
 
 #### Backend
 
-* A net standard library that holds the business definitions and concrete implementations
-* Entity Framework core
+* A Net Standard library that holds the business definitions and concrete implementations
+* Entity Framework Core
 * Automapper
 * ASP.NET Core Identity
 * ASP.NET Core MVC - WebApi
@@ -51,7 +51,7 @@ The web application is basically a SPA (Single Page Application) so there is jus
 
 > Note: The .bak file was uploaded using the Git LFS extension, it's possible you need to install it before download it. Also its protected by a password, it's: **j0rg3r4m1r3z**
 
-2. Modify the connection string values in the **appsettings.json** file for the web project to target your SQL Server instance.
+2. Modify the connection string values in the **appsettings.json** file of the web project to target your SQL Server instance.
 
 3. You can run the web project locally in debug mode or simple right click it and use the wizard to publish it to a remote service like Azure App Service.
 
